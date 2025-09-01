@@ -11,7 +11,7 @@ USER node
 
 RUN git clone https://github.com/breshyb/base /home/node/base
 
-WORKDIR /home/node/n
+WORKDIR /home/node/base
 
 RUN chmod -R 777 /home/node/base/
 
@@ -22,4 +22,5 @@ EXPOSE 7860
 ENV NODE_ENV=production
 
 CMD ["npm", "start"]
+
 
