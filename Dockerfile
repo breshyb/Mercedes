@@ -9,11 +9,11 @@ RUN apt-get update && \
 
 USER node
 
-RUN git clone https://github.com/betingrich4/Files /home/node/Files
+RUN git clone https://github.com/breshyb/base /home/node/base
 
 WORKDIR /home/node/n
 
-RUN chmod -R 777 /home/node/Files/
+RUN chmod -R 777 /home/node/base/
 
 RUN yarn install --network-concurrency 1
 
@@ -22,3 +22,4 @@ EXPOSE 7860
 ENV NODE_ENV=production
 
 CMD ["npm", "start"]
+
